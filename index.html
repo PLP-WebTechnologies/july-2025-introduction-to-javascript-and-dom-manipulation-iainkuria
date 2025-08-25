@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JavaScript Fundamentals Assignment</h1>
+            <p class="intro">Demonstrating variables, conditionals, functions, loops, and DOM manipulation</p>
+        </header>
+        
+        <div class="section">
+            <h2>Part 1: Variables and Conditionals</h2>
+            <p>JavaScript variables and conditional statements for decision making.</p>
+            
+            <div class="code-block">
+// Variable declarations
+let userName = "JavaScript Learner";
+const userId = 12345;
+var userStatus = "Active";
+
+// Conditional statements
+if (userStatus === "Active") {
+    console.log("User is active");
+} else if (userStatus === "Inactive") {
+    console.log("User is inactive");
+} else {
+    console.log("User status unknown");
+}
+            </div>
+            
+            <div class="interactive-area">
+                <h3>Conditional Checker</h3>
+                <div class="input-group">
+                    <label for="userInput">Enter a number:</label>
+                    <input type="number" id="userInput" placeholder="Enter a number">
+                    <button onclick="checkNumber()">Check Number</button>
+                </div>
+                <div id="conditionalResult" class="result">Result will appear here</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Part 2: Functions</h2>
+            <p>JavaScript functions for reusable code blocks.</p>
+            
+            <div class="code-block">
+// Function 1: Calculate area of a rectangle
+function calculateArea(width, height) {
+    return width * height;
+}
+
+// Function 2: Convert temperature from Celsius to Fahrenheit
+function celsiusToFahrenheit(celsius) {
+    return (celsius * 9/5) + 32;
+}
+            </div>
+            
+            <div class="interactive-area">
+                <h3>Function Demonstrations</h3>
+                <div class="input-group">
+                    <label for="width">Width:</label>
+                    <input type="number" id="width" placeholder="Enter width">
+                    <label for="height">Height:</label>
+                    <input type="number" id="height" placeholder="Enter height">
+                    <button onclick="showArea()">Calculate Area</button>
+                </div>
+                
+                <div class="input-group">
+                    <label for="celsius">Temperature in Celsius:</label>
+                    <input type="number" id="celsius" placeholder="Enter Celsius">
+                    <button onclick="convertTemperature()">Convert to Fahrenheit</button>
+                </div>
+                
+                <div id="functionResult" class="result">Results will appear here</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Part 3: Loops</h2>
+            <p>JavaScript loops for repetitive tasks.</p>
+            
+            <div class="code-block">
+// For loop example
+for (let i = 1; i <= 5; i++) {
+    console.log("Count: " + i);
+}
+
+// While loop example
+let count = 1;
+while (count <= 5) {
+    console.log("While count: " + count);
+    count++;
+}
+            </div>
+            
+            <div class="interactive-area">
+                <h3>Loop Demonstrations</h3>
+                <div class="input-group">
+                    <label for="loopNumber">Enter a number (1-10):</label>
+                    <input type="number" id="loopNumber" min="1" max="10" value="5">
+                    <button onclick="runLoops()">Run Loops</button>
+                </div>
+                
+                <div id="loopResult" class="result">Loop results will appear here</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Part 4: DOM Manipulation</h2>
+            <p>Interacting with the Document Object Model.</p>
+            
+            <div class="interactive-area">
+                <h3>DOM Interactions</h3>
+                
+                <div class="input-group">
+                    <button onclick="changeText()">Change Text Below</button>
+                    <button onclick="changeColor()">Change Background Color</button>
+                    <button onclick="toggleContent()">Toggle Content</button>
+                </div>
+                
+                <div id="textContent" class="result">This is the original text content.</div>
+                
+                <div class="color-box" id="colorBox"></div>
+                
+                <div id="toggledContent" class="result hidden">
+                    <p>This content was toggled using DOM manipulation!</p>
+                    <p>You can show and hide elements with JavaScript.</p>
+                </div>
+                
+                <div class="input-group">
+                    <label for="newItem">Add to list:</label>
+                    <input type="text" id="newItem" placeholder="Enter item">
+                    <button onclick="addToList()">Add Item</button>
+                </div>
+                
+                <div class="list-container">
+                    <ul id="itemList">
+                        <li>First item</li>
+                        <li>Second item</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>JavaScript Fundamentals Assignment - Demonstrating core JavaScript concepts</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
